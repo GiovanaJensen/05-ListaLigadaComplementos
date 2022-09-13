@@ -70,7 +70,7 @@ void menu()
 
 void inicializar()
 {
-	// se a lista já possuir elementos
+	// se a lista jÃ¡ possuir elementos
 // libera a memoria ocupada
 	NO* aux = primeiro;
 	while (aux != NULL) {
@@ -138,6 +138,10 @@ void inserirElemento()
 			NO* deslocar = NULL;
 			while (aux->prox != NULL) {
 				if (novo->valor < aux->prox->valor) {
+					if(novo->valor < aux->valor){
+				        	primeiro = novo;
+				        	novo->prox = aux;
+				    	}
 					deslocar = aux->prox;
 					aux->prox = novo;
 					novo->prox = deslocar;
