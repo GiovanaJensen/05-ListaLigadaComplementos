@@ -1,5 +1,7 @@
-# Lista Ligada - Complmenentos
+# Lista Ligada - Complemenentos
 ---
+## Giovana de Oliveira Fernandes
+## giovana.fernandes2@fatec.sp.gov.br
 
 ## Objetivos
 
