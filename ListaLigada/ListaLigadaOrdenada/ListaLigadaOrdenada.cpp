@@ -131,12 +131,32 @@ void inserirElemento()
 	}
 	else
 	{
-		// procura o final da lista
 		NO* aux = primeiro;
+
+		NO* deslocar = NULL;
 		while (aux->prox != NULL) {
-			aux = aux->prox;
+			if (novo->valor <= aux->prox->valor) {
+				deslocar = aux->prox;
+				aux->prox = novo;
+				novo->prox = deslocar;
+				cout << "adicionado" << endl;
+				break;
+			}
+			else {
+				aux = aux->prox;
+			}
 		}
-		aux->prox = novo;
+		while (aux->prox == NULL) {
+			if (novo->valor < aux->valor) {
+				primeiro = novo;
+				novo->prox = aux;
+			}
+			else {
+				cout << "adicionado" << endl;
+
+				aux->prox = novo;
+			}
+		}
 	}
 }
 
